@@ -1,0 +1,21 @@
+# Thư mục upload: CHỈ phục vụ file tĩnh, KHÔNG thực thi mã.
+# Chống upload file .php độc hại rồi gọi trực tiếp.
+
+# Tắt mọi engine kịch bản
+<IfModule mod_php.c>
+    php_admin_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_admin_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_admin_flag engine off
+</IfModule>
+
+# Chặn thực thi các loại file script
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|phar|pl|py|cgi|sh|asp|aspx|jsp)$">
+    Require all denied
+</FilesMatch>
+
+Options -ExecCGI -Indexes
+AddType text/plain .php .phtml .phar

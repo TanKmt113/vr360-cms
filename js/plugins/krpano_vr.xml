@@ -1,0 +1,262 @@
+<krpano debugmode="false">
+
+	
+	<plugin name="webvr" postracking="true"/>
+
+	<menu_array name="ar_0" ath="-80" yoffset="-450" ryo="0"  />
+	<menu_array name="ar_1" ath="-40" yoffset="-450" ryo="0"  />
+0	<menu_array name="ar_3" ath="0" yoffset="-450"   ryo="0"  />
+	<menu_array name="ar_4" ath="40" yoffset="-450"  ryo="0"  />
+	<menu_array name="ar_5" ath="80" yoffset="-450"  ryo="0"  />
+	
+	<menu_array name="ar_6" ath="-80" yoffset="0" ryo="0"  />
+	<menu_array name="ar_7" ath="-40" yoffset="0" ryo="0"  />
+	<menu_array name="ar_8" ath="0" yoffset="0"   ryo="0"  />
+	<menu_array name="ar_9" ath="40" yoffset="0"  ryo="0"  />
+	<menu_array name="ar_10" ath="80" yoffset="0" ryo="0"  />
+	
+	<menu_array name="ar_11" ath="-80" yoffset="450" ryo="0"  />
+	<menu_array name="ar_12" ath="-40" yoffset="450" ryo="0"  />
+	<menu_array name="ar_13" ath="0" yoffset="450"   ryo="0"  />
+	<menu_array name="ar_14" ath="40" yoffset="450"  ryo="0"  />
+	<menu_array name="ar_15" ath="80" yoffset="450"  ryo="0"  />
+
+
+	<action name="add_vr_element_thumb" scope="local" args="title, ath, yoffset, thumburl, sceneto, ryo,namez">
+		addhotspot(calc(namez+'_a'),bg);
+		addhotspot(calc(namez+'_v=b'),thumb);
+		addhotspot(calc(namez+'_c'),text);
+ 		
+		set(bg,  capture=false,  distorted=true, zorder=1, enabled=true, type=text, bgcolor=0x006666,bgshadow=0  1 #ffffff 0.8, bgalpha=1, bgroundedge=10, width=140, height=100,ry=get(ryo), ath=calc(view.hlookat+ryo),atv=0,oy=calc((yoffset+30)*0.15*0.5), ox=get(ath), depth=250, scale=0.25,onover=tween(depth,249), onout=tween(depth,250),clickaction=get(sceneto), onclick='set(enabled,false); loadscene(get(clickaction),null,MERGE,BLEND(.5));');
+		
+		set(thumb,capture=false, distorted=true, zorder=2, capture=false, url=get(thumburl), width=120, height=65,ry=get(ryo), ath=calc(view.hlookat+ryo), oy=calc(yoffset*0.15*0.5),ox=get(ath), depth=250, scale=0.26, onover=tween(depth,249), onout=tween(depth,250),clickaction=get(sceneto), onclick='set(enabled,false); loadscene(get(clickaction),null,MERGE,BLEND(.5));');
+		
+		set(text, capture=false, distorted=true, zorder=3, ry=get(ryo), enabled=true, type=text, html=get(title), css='text-align:center;color:#FFFFFF;font-size:12px;;font-family:Regular-font', oversampling=3, mipmapping=true, bgcolor=0xFFFFFF, bgalpha=0.004, width=200, height=50, ath=calc(view.hlookat+ryo), oy=calc((yoffset+180)*0.15*0.5),ox=get(ath), depth=250, scale=0.18,onover=tween(depth,249), onout=tween(depth,250) ,clickaction=get(sceneto), onclick='set(enabled,false); loadscene(get(clickaction),null,MERGE,BLEND(.5));');
+		
+		set(bg,    ty=0, autoalpha=true, alpha=0);
+		set(thumb, ty=0, autoalpha=true, alpha=0);
+		set(text,  ty=0, autoalpha=true, alpha=0);
+		
+		
+		set(global.thumbs[get(global.thumbs.length)],get(local));
+        
+	</action>
+
+<action name="close_vr_x">
+  
+        addhotspot(closex,close);
+        addhotspot(titlex,x_title);
+        addhotspot(page1x,page_1);
+        addhotspot(page2x,page_2);
+        addhotspot(bgrx,bgrt);
+        addhotspot(helpt,z_help);
+	
+	if(language==vi,
+		set(z_help,capture=false, distorted=true, zorder=2, capture=false, url='%SWFPATH%/plugins/help.png', width=200, height=prop,ry=0, ath=calc(view.hlookat-70), oy=calc(20*0.15*0.5), depth=280, scale=0.26, onover=tween(depth,279), onout=tween(depth,280));
+
+		set(x_title,capture=false,   distorted=true, zorder=1, enabled=true, type=text,css=color:#006666;font-size:38px;text-align:center, bgcolor=0xFF0000,bgalpha=0.0,html=MENU 360°, bgroundedge=10, width=auto, padding=20, height=auto, ath=calc(view.hlookat), oy=calc((-720)*0.15*0.5),ox=0, depth=250, scale=0.15, onover=tween(depth,249), onout=tween(depth,250));
+	
+	    set(page_1,capture=false,   distorted=true, zorder=1, enabled=true, type=text,css=color:#ffffff;font-size:16px;text-align:center, bgcolor=0xFFcc00,bgalpha=0.8,html=Trang 01, bgroundedge=10, width=auto, padding=10, height=auto, ath=calc(view.hlookat), oy=calc((860)*0.15*0.5),ox=-10,onloaded=if(scenedata.count LT 16,set(ox,0)), depth=250, scale=0.15, onover=tween(depth,249), onout=tween(depth,250), clickaction=hidethumbs();add_vr_thumb_p1();showthumbs();close_vr_x(), onclick='clickaction();');
+	
+	    set(page_2,capture=false,   distorted=true, zorder=1, enabled=true, type=text,css=color:#ffffff;font-size:16px;text-align:center, bgcolor=0x006666,bgalpha=0.8,html=Trang 02, bgroundedge=10, width=auto, padding=10, height=auto, ath=calc(view.hlookat), oy=calc((860)*0.15*0.5),ox=10, depth=250, scale=0.15, onover=tween(depth,249), onout=tween(depth,250), onloaded=if(scenedata.count LT 16,set(visible,0)), clickaction=hidethumbs();add_vr_thumb_p2();showthumbs();close_vr_x();set(bgcolor,0xFFcc00);set(hotspot[page1x].bgcolor,0x006666);, onclick='clickaction();');
+	
+	
+	);
+	
+	if(language==en,
+		set(z_help,capture=false, distorted=true, zorder=2, capture=false, url='%SWFPATH%/plugins/help_en.png', width=200, height=prop,ry=0, ath=calc(view.hlookat-70), oy=calc(20*0.15*0.5), depth=280, scale=0.26, onover=tween(depth,279), onout=tween(depth,280));
+
+		set(x_title,capture=false,   distorted=true, zorder=1, enabled=true, type=text,css=color:#006666;font-size:38px;text-align:center, bgcolor=0xFF0000,bgalpha=0.0,html=MENU 360°, bgroundedge=10, width=auto, padding=20, height=auto, ath=calc(view.hlookat), oy=calc((-720)*0.15*0.5),ox=0, depth=250, scale=0.15, onover=tween(depth,249), onout=tween(depth,250));
+	
+	    set(page_1,capture=false,   distorted=true, zorder=1, enabled=true, type=text,css=color:#ffffff;font-size:16px;text-align:center, bgcolor=0xFFcc00,bgalpha=0.8,html=Page 01, bgroundedge=10, width=auto, padding=10, height=auto, ath=calc(view.hlookat), oy=calc((860)*0.15*0.5),ox=-10,onloaded=if(scenedata.count LT 16,set(ox,0)), depth=250, scale=0.15, onover=tween(depth,249), onout=tween(depth,250), clickaction=hidethumbs();add_vr_thumb_p1();showthumbs();close_vr_x(), onclick='clickaction();');
+	
+	    set(page_2,capture=false,   distorted=true, zorder=1, enabled=true, type=text,css=color:#ffffff;font-size:16px;text-align:center, bgcolor=0x006666,bgalpha=0.8,html=Page 02, bgroundedge=10, width=auto, padding=10, height=auto, ath=calc(view.hlookat), oy=calc((860)*0.15*0.5),ox=10, depth=250, scale=0.15, onover=tween(depth,249), onout=tween(depth,250), onloaded=if(scenedata.count LT 16,set(visible,0)), clickaction=hidethumbs();add_vr_thumb_p2();showthumbs();close_vr_x();set(bgcolor,0xFFcc00);set(hotspot[page1x].bgcolor,0x006666);, onclick='clickaction();');
+	
+	);
+	if(language==cn,
+		set(z_help,capture=false, distorted=true, zorder=2, capture=false, url='%SWFPATH%/plugins/help_cn.png', width=200, height=prop,ry=0, ath=calc(view.hlookat-70), oy=calc(20*0.15*0.5), depth=280, scale=0.26, onover=tween(depth,279), onout=tween(depth,280));
+
+		set(x_title,capture=false,   distorted=true, zorder=1, enabled=true, type=text,css=color:#006666;font-size:38px;text-align:center, bgcolor=0xFF0000,bgalpha=0.0,html=MENU 360°, bgroundedge=10, width=auto, padding=20, height=auto, ath=calc(view.hlookat), oy=calc((-720)*0.15*0.5),ox=0, depth=250, scale=0.15, onover=tween(depth,249), onout=tween(depth,250));
+	
+	    set(page_1,capture=false,   distorted=true, zorder=1, enabled=true, type=text,css=color:#ffffff;font-size:16px;text-align:center, bgcolor=0xFFcc00,bgalpha=0.8,html=第 1 页, bgroundedge=10, width=auto, padding=10, height=auto, ath=calc(view.hlookat), oy=calc((860)*0.15*0.5),ox=-10,onloaded=if(scenedata.count LT 16,set(ox,0)), depth=250, scale=0.15, onover=tween(depth,249), onout=tween(depth,250), clickaction=hidethumbs();add_vr_thumb_p1();showthumbs();close_vr_x(), onclick='clickaction();');
+	
+	    set(page_2,capture=false,   distorted=true, zorder=1, enabled=true, type=text,css=color:#ffffff;font-size:16px;text-align:center, bgcolor=0x006666,bgalpha=0.8,html=第2页, bgroundedge=10, width=auto, padding=10, height=auto, ath=calc(view.hlookat), oy=calc((860)*0.15*0.5),ox=10, depth=250, scale=0.15, onover=tween(depth,249), onout=tween(depth,250), onloaded=if(scenedata.count LT 16,set(visible,0)), clickaction=hidethumbs();add_vr_thumb_p2();showthumbs();close_vr_x();set(bgcolor,0xFFcc00);set(hotspot[page1x].bgcolor,0x006666);, onclick='clickaction();');
+	
+	);
+		
+	   set(close,capture=false,   distorted=true, zorder=1, enabled=true, type=text,css=color:#ffffff;font-size:28px;text-align:center, bgcolor=0xFF0000,bgalpha=0.8,html=X, bgroundedge=10, width=auto, padding=20, height=auto, ath=calc(view.hlookat), oy=calc((-760)*0.15*0.5),ox=115, depth=250, scale=0.15, onover=tween(depth,249), onout=tween(depth,250), clickaction=hidethumbs();set(hotspot[bgrx].alpha,0);, onclick='set(enabled,false); clickaction();');
+	
+	
+        set(bgrt,capture=false,   distorted=true, zorder=-10, enabled=false, type=text,css=color:#ffffff;font-size:10px;text-align:center, bgcolor=0xffffff,bgshadow=0 0 1 #ffffff 0.8, bgalpha=0.3,html=, bgroundedge=5, width=1600, padding=10, height=900, ath=calc(view.hlookat+0), oy=calc((50)*0.15*0.5), depth=250, scale=0.15);
+	
+     
+    </action>
+		
+    <action name="close_vr_x_1">
+		  
+				
+				addhotspot(auto,close);
+		
+				set(close, ,capture=false,   distorted=true, zorder=1, enabled=true, type=text,css=color:#ffffff;font-size:10px;text-align:center;font-family:Regular-font, bgcolor=0xFB722F,bgshadow=0 0 1 #ffffff 0.8, bgalpha=0.8,html=ĐÓNG MENU, bgroundedge=5, width=auto,padding=10, height=auto, ath=calc(view.hlookat+0), oy=calc((440+20)*0.15*0.5)      , depth=200, scale=0.15,onover=tween(depth,219), onout=tween(depth,220),clickaction=hidethumbs(), onclick='set(enabled,false); clickaction();');
+			
+			
+				  
+    
+    </action>
+	<action name="showthumbs" scope="local">
+		for(set(i,0), i LT global.thumbs.length, inc(i),
+			scope(get(global.thumbs[get(i)]),
+				callwith(bg,    tween(ty|alpha, 0|1, 1.0, easeOutQuint|easeOutQuad); );
+				callwith(thumb, tween(ty|alpha, 0|1, 1.1, easeOutQuint|easeOutQuad); );
+				callwith(text,  tween(ty|alpha, 0|1, 1.2, easeOutQuint|easeOutQuad); );
+				
+			);
+		);
+		set(hotspot[bgrx].alpha,1);
+		callwith(z_help,  tween(ty|alpha, 0|1, 0.5); );
+				callwith(page_1,  tween(ty|alpha, 0|1, 0.5); );
+				callwith(page_2,  tween(ty|alpha, 0|1, 0.5); );
+				callwith(close,  tween(ty|alpha, 0|1, 0.5); );
+				callwith(x_title,  tween(ty|alpha, 0|1, 0.5); );
+				
+	</action>
+
+	<action name="hidethumbs" scope="local">
+		for(set(i,0), i LT global.thumbs.length, inc(i),
+				scope(get(global.thumbs[get(i)]),
+				callwith(bg,    tween(ty|alpha, 0|0, 0.5); );
+				callwith(thumb, tween(ty|alpha, 0|0, 0.5); );
+				callwith(text,  tween(ty|alpha, 0|0, 0.5); );
+				callwith(z_help,  tween(ty|alpha, 0|0, 0.5); );
+				callwith(page_1,  tween(ty|alpha, 0|0, 0.5); );
+				callwith(page_2,  tween(ty|alpha, 0|0, 0.5); );
+				callwith(close,  tween(ty|alpha, 0|0, 0.5); );
+				callwith(x_title,  tween(ty|alpha, 0|0, 0.5); );
+				
+			);
+		);
+        
+        
+        
+	</action>
+
+
+	<action name="add_vr_thumb_p1" scope="global" autorun="onstart">
+	
+		def(global.thumbs, array);
+		if(scenedata.count LT 15, set(tempxz,get(scenedata.count)),set(tempxz,15));
+		if(language==vi, for(set(i,0), i LT tempxz, inc(i),
+			if((scenedata[get(i)].name!=scene_3d1) AND (scenedata[get(i)].name!=scene_3d2),
+        add_vr_element_thumb(
+		calc(i+1+'.'+scenedata[get(i)].title_vi),
+		get(menu_array[get(i)].ath),
+		get(menu_array[get(i)].yoffset), 
+		get(scene[get(scenedata[get(i)].name)].thumburl),
+		get(scenedata[get(i)].name),
+		get(menu_array[get(i)].ryo),
+		get(menu_array[get(i)].name)
+		);
+			);
+		););
+      
+		if(language==en, for(set(i,0), i LT tempxz, inc(i),
+			if((scenedata[get(i)].name!=scene_3d1) AND (scenedata[get(i)].name!=scene_3d2),
+        add_vr_element_thumb(
+		calc(i+1+'.'+scenedata[get(i)].title_en),
+		get(menu_array[get(i)].ath),
+		get(menu_array[get(i)].yoffset), 
+		get(scene[get(scenedata[get(i)].name)].thumburl),
+		get(scenedata[get(i)].name),
+		get(menu_array[get(i)].ryo),
+		get(menu_array[get(i)].name)
+		););
+		););
+      
+		if(language==cn, for(set(i,0), i LT tempxz, inc(i),
+			if((scenedata[get(i)].name!=scene_3d1) AND (scenedata[get(i)].name!=scene_3d2),
+        add_vr_element_thumb(
+		calc(i+1+'.'+scenedata[get(i)].title_cn),
+		get(menu_array[get(i)].ath),
+		get(menu_array[get(i)].yoffset), 
+		get(scene[get(scenedata[get(i)].name)].thumburl),
+		get(scenedata[get(i)].name),
+		get(menu_array[get(i)].ryo),
+		get(menu_array[get(i)].name)
+		););
+		););
+      
+		
+		
+	
+	</action>
+
+<action name="add_vr_thumb_p2" scope="global" >
+	
+		def(global.thumbs, array);
+		
+		
+		if(language==vi,
+	    for(set(i,15), i LT scenedata.count, inc(i),
+		if((scenedata[get(i)].name!=scene_3d1) AND (scenedata[get(i)].name!=scene_3d2),
+        add_vr_element_thumb(
+		calc(i+1+'.'+scenedata[get(i)].title_vi),
+		get(menu_array[calc(i-15)].ath),
+		get(menu_array[calc(i-15)].yoffset), 
+		get(scene[get(scenedata[get(i)].name)].thumburl),
+		get(scenedata[get(i)].name),
+		get(menu_array[calc(i-15)].ryo),
+	    get(menu_array[calc(i-15)].name),
+		);
+		);
+		);
+	
+	);
+		if(language==en,
+	
+		for(set(i,15), i LT scenedata.count, inc(i),
+			if((scenedata[get(i)].name!=scene_3d1) AND (scenedata[get(i)].name!=scene_3d2),
+        add_vr_element_thumb(
+		calc(i+1+'.'+scenedata[get(i)].title_en),
+		get(menu_array[calc(i-15)].ath),
+		get(menu_array[calc(i-15)].yoffset), 
+		get(scene[get(scenedata[get(i)].name)].thumburl),
+		get(scenedata[get(i)].name),
+		get(menu_array[calc(i-15)].ryo),
+	    get(menu_array[calc(i-15)].name),
+		);
+		);
+		
+	);
+	
+	);
+		if(language==cn,
+	for(set(i,15), i LT scenedata.count, inc(i),
+		if((scenedata[get(i)].name!=scene_3d1) AND (scenedata[get(i)].name!=scene_3d2),
+        add_vr_element_thumb(
+		calc(i+1+'.'+scenedata[get(i)].title_cn),
+		get(menu_array[calc(i-15)].ath),
+		get(menu_array[calc(i-15)].yoffset), 
+		get(scene[get(scenedata[get(i)].name)].thumburl),
+		get(scenedata[get(i)].name),
+		get(menu_array[calc(i-15)].ryo),
+	    get(menu_array[calc(i-15)].name),
+		);
+		);
+		
+	);
+     
+     
+	);
+	</action>
+
+
+
+	<action name="load_toscene">
+		hidethumbs();
+		delayedcall(0.75,
+		loadscene(%1,null,MERGE,BLEND(.5));
+		);
+	</action>
+
+
+</krpano>

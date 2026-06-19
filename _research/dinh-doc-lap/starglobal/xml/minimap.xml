@@ -1,0 +1,103 @@
+<krpano>
+
+
+	<action name="mapspot_loadscene">
+		if(layer[map].scale GT 0.25,
+			set(layer[map].enabled, false);
+			tween(layer[map].alpha, 0.0, 0.25, default,
+				loadscene(%1, null, MERGE, BLEND(1));
+				set(layer[map].onclick, openmap(););
+				layer[map].changeorigin(leftbottom,leftbottom);
+				set(layer[map].x, 0);
+				set(layer[map].y, 50);
+				set(layer[map].scale, 0.1);
+				set(events[sceneload].onloadcomplete,
+					delayedcall(1,
+						tween(layer[map].alpha, 1.0, 0.5, default, set(layer[map].enabled, true); );
+					  );
+				  );
+			  );
+		  ,
+			<!-- small map: just load the scene -->
+			loadscene(%1, null, MERGE, BLEND(1));-
+		  );
+	</action>
+	
+		<!-- map opening - scale the map up to 100% (or smaller if the screen is too small) -->
+	<action name="openmap">
+		layer[map].changeorigin(center,center);
+		set(bigscale,1.6);
+		set(big,1);
+		if(layer[map].imagewidth GT stagewidth, div(bigscale, stagewidth, layer[map].imagewidth); );
+		mul(bigscale,0.8);
+		tween(layer[map].x, 0);
+		tween(layer[map].y, 0);
+		tween(layer[map].scale, get(bigscale));
+		set(layer[map].visible,true);
+		set(layer[open_map].visible,false);
+		set(events[test].onmousedown, closemap());
+		js('(closeThumbnail())');
+	</action>
+	
+	
+
+
+	<!-- map closing - scale the map back to 0.25 of its image pixelsize -->
+	<action name="closemap" autorun="preinit">
+		set(bigscale,0.08);
+		set(big,0);
+		layer[map].changeorigin(rightbottom,rightbottom);
+		tween(layer[map].x, 10);
+		tween(layer[map].y, 50);
+		tween(layer[map].scale, get(bigscale));
+		set(layer[map].visible,false);
+		set(layer[open_map].visible,true);
+		set(events[test].onmousedown, null);
+		js('(openThumbnail())');
+	</action>
+	
+<!-- the map image -->
+	<layer name="map" url="map/map-background.png" keep="true"
+	       align="rightbottom"
+	       scale="1" scalechildren="true"
+		   visible="false"
+	       onclick="js('')"
+	       />
+	       
+	<layer name="open_map" url="map/map-background.png" keep="true" handcursor="false" capture="false"
+	       align="rightbottom"
+		   visible="true"
+	       scale="0.1" scalechildren="true"
+	       onclick="openmap();"
+		   x= "10"
+		   y= "50"
+	       />
+	         
+		   
+	<!-- the map spot images js('loadscene(scene_05_01-nha-truyen-thong-trung-doan-tay-tien-(1))');closemap(),openmap())  set(layer[a].visible,'true'   21-toan-canh-thi-tran-moc-chau_gif.gif-->
+	<!--<style name="return" keep="true" url="map_icon_back_to-02.png" parent="map" align="lefttop" edge="center" scale="0.1" scalechildren="true" scale.mobile="0.2"/>-->
+	<!--<style name="map-dia-diem" keep="true" url="map/map-dia-diem.png" parent="map" align="lefttop" edge="center" scale="1" scalechildren="true" scale.mobile="1"/>-->
+	<!--<style name="mapspot1" keep="true" url="thumb-dia-diem/chua-thien-hung-location.png" parent="map" align="lefttop" edge="center" scale="0.7" scalechildren="true" scale.mobile="0.3"/>-->
+	<!--<style name="mapspot2" keep="true" url="thumb-dia-diem/khach-san-location.png" parent="map" align="lefttop" edge="center" scale="0.7" scalechildren="true" scale.mobile="0.3"/>-->
+	<!--<style name="mapspot3" keep="true" url="thumb-dia-diem/thien-vien-thien-hung-location.png" parent="map" align="lefttop" edge="center" scale="0.7" scalechildren="true" scale.mobile="0.3"/>-->
+	
+	
+ <!--   <style name="mapspothidden" keep="true" url="camiconhidden.png" parent="map" align="lefttop" edge="center" scale.mobile="2" />-->
+
+	
+	<!--<layer name="scene_map-dia-diem" style="map-dia-diem" x="960" y="534.5" zorder="1" onclick="" />	-->
+	<!--<layer name="scene_01_01-nha-ba-tang-tren-cao-(1)" style="mapspot1" x="1045" y="333" zorder="1" onclick="if (big == 1,js('loadscene(scene_01_01-nha-ba-tang-tren-cao-(1))');closemap(),openmap())" />-->
+	<!--<layer name="scene_02_03-khach-san-ohana-tren-cao-(8)" style="mapspot2" x="1464" y="446" zorder="1" onclick="if (big == 1,js('loadscene(scene_02_03-khach-san-ohana-tren-cao-(8))');closemap(),openmap())" />-->
+	<!--<layer name="scene_02_01-tuong-phat-nam-tren-cao-(1)" style="mapspot3" x="465" y="475" zorder="1" onclick="if (big == 1,js('loadscene(scene_02_01-tuong-phat-nam-tren-cao-(1))');closemap(),openmap())" />-->
+	
+	
+    <!--text-icon-->
+ <!--   <style name="text-icon-1" keep="true" url="text-icon/chua-thien-hung-text.png" parent="map" align="lefttop" edge="center" scale="0.7" scalechildren="true" scale.mobile="1" />-->
+	<!--<style name="text-icon-2" keep="true" url="text-icon/khach-san-text.png" parent="map" align="lefttop" edge="center" scale="0.7" scalechildren="true" scale.mobile="1" x="687" y="909" zorder="1"/>-->
+	<!--<style name="text-icon-3" keep="true" url="text-icon/thien-vien-thien-hung-text.png" parent="map" align="lefttop" edge="center" scale="0.7" scalechildren="true" scale.mobile="1" x="1231" y="909" zorder="1"/>-->
+
+	<!--<layer name="text-icon-1-text" style="text-icon-1" x="1042" y="494" zorder="1" onclick="" />-->
+ <!--   	<layer name="text-icon-2-text" style="text-icon-2" x="1464" y="603" zorder="1" onclick="" />-->
+ <!--   	<layer name="text-icon-3-text" style="text-icon-3" x="465" y="632" zorder="1" onclick="" />-->
+	       
+</krpano>

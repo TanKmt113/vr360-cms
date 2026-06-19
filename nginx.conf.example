@@ -1,0 +1,49 @@
+# ====================================================================
+# Cấu hình Nginx mẫu cho VR360 CMS
+# Nginx KHÔNG đọc .htaccess → các bảo vệ phải khai báo ở đây.
+# ====================================================================
+server {
+    listen 80;
+    server_name your-domain.com;
+    root /var/www/vr360-cms;
+    index index.php;
+
+    client_max_body_size 512M;          # cho phép upload pano/tiles lớn
+
+    # Chặn truy cập thư mục nội bộ
+    location ~ ^/(config|core|database|storage)/ {
+        deny all;
+        return 403;
+    }
+
+    # Chặn file nhạy cảm
+    location ~ /\.(env|git) {
+        deny all;
+        return 403;
+    }
+    location ~ \.(sql)$ {
+        deny all;
+        return 403;
+    }
+
+    # Thư mục upload: KHÔNG thực thi PHP
+    location ^~ /upload/ {
+        location ~ \.php$ { deny all; return 403; }
+    }
+
+    # PHP-FPM
+    location ~ \.php$ {
+        include fastcgi_params;
+        fastcgi_pass unix:/run/php/php8.2-fpm.sock;   # chỉnh theo phiên bản PHP
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # Security headers
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+}

@@ -1,0 +1,20 @@
+# ==== VR360 CMS — bảo vệ truy cập (Apache) ====
+
+# Chặn truy cập trực tiếp các thư mục nội bộ
+RedirectMatch 403 ^/?(config|core|database|storage)(/|$)
+
+# Chặn các file nhạy cảm
+<FilesMatch "(^\.env|\.env\.example|\.sql|composer\.(json|lock)|\.gitignore)$">
+    Require all denied
+</FilesMatch>
+
+# Không liệt kê thư mục
+Options -Indexes
+
+# Bảo vệ header cơ bản (nếu mod_headers bật)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header unset X-Powered-By
+</IfModule>

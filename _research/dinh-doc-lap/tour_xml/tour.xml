@@ -1,0 +1,1813 @@
+<krpano version="1.20.11" title="Virtual Tour" showerrors="true" logkey="false" debugmode="true" 
+debugkeys="true" debugjsactions="true" debugjsplugins="true" >
+
+
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+
+
+   <scene name="scene_00_toan_canh_dinh" title="00_toan_canh_dinh" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/00_toan_canh_dinh.tiles/thumb.jpg" lat="10.77910028" lng="106.69730556" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="240.477" vlookat="7.514" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/00_toan_canh_dinh.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/00_toan_canh_dinh.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/00_toan_canh_dinh.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+
+	<scene name="scene_00_hau_dinh_tren_cao" title="00_hau_dinh_tren_cao" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/00_hau_dinh_tren_cao.tiles/thumb.jpg" lat="10.77633444" lng="106.69472444" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-118.777" vlookat="17.850" fovtype="MFOV" fov="119.955" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/00_hau_dinh_tren_cao.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/00_hau_dinh_tren_cao.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/00_hau_dinh_tren_cao.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_00_phia_truoc_dinh_tren_cao" title="00_phia_truoc_dinh_tren_cao" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/00_phia_truoc_dinh_tren_cao.tiles/thumb.jpg" lat="10.77800972" lng="106.69628556" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="242.210" vlookat="31.947" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/00_phia_truoc_dinh_tren_cao.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/00_phia_truoc_dinh_tren_cao.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/00_phia_truoc_dinh_tren_cao.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+
+	<scene name="scene_02_phong_chieu_phim_(1)" title="02_phong_chieu_phim_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_chieu_phim_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-88.904" vlookat="1.141" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_chieu_phim_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_chieu_phim_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_chieu_phim_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_chieu_phim_(2)" title="02_phong_chieu_phim_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_chieu_phim_(2).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="135.214" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_chieu_phim_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_chieu_phim_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_chieu_phim_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_lam_viec_pho_tong_thong_(1)" title="02_phong_lam_viec_pho_tong_thong_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(1).tiles/thumb.jpg" lat="10.77770806" lng="106.69529306" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.592" vlookat="0.014" fovtype="MFOV" fov="131.539" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_lam_viec_pho_tong_thong_(2)" title="02_phong_lam_viec_pho_tong_thong_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(2).tiles/thumb.jpg" lat="10.77766722" lng="106.69523500" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_lam_viec_pho_tong_thong_(3)" title="02_phong_lam_viec_pho_tong_thong_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(3).tiles/thumb.jpg" lat="10.77755222" lng="106.69529528" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="91.249" vlookat="7.503" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_lam_viec_tong_thong_(1)" title="02_phong_lam_viec_tong_thong_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_lam_viec_tong_thong_(2)" title="02_phong_lam_viec_tong_thong_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(2).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="89.882" vlookat="10.295" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_lam_viec_tong_thong_(3)" title="02_phong_lam_viec_tong_thong_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(3).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-1.062" vlookat="1.177" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_tong_thong_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_tiep_khach_tong_thong_(1)" title="02_phong_tiep_khach_tong_thong_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(1).tiles/thumb.jpg" lat="10.77685278" lng="106.69606250" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="176.137" vlookat="3.716" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_tiep_khach_tong_thong_(2)" title="02_phong_tiep_khach_tong_thong_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(2).tiles/thumb.jpg" lat="10.77634806" lng="106.69513833" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="58.021" vlookat="13.012" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_tiep_khach_tong_thong_(3)" title="02_phong_tiep_khach_tong_thong_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(3).tiles/thumb.jpg" lat="10.77622083" lng="106.69613167" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="177.738" vlookat="0.369" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_tiep_khach_tong_thong_(4)" title="02_phong_tiep_khach_tong_thong_(4)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(4).tiles/thumb.jpg" lat="10.77719556" lng="106.69576222" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(4).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(4).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(4).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_tiep_khach_tong_thong_(5)" title="02_phong_tiep_khach_tong_thong_(5)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(5).tiles/thumb.jpg" lat="10.77675528" lng="106.69567583" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(5).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(5).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(5).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_tiep_khach_tong_thong_(6)" title="02_phong_tiep_khach_tong_thong_(6)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(6).tiles/thumb.jpg" lat="10.77702028" lng="106.69551528" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="91.311" vlookat="6.935" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(6).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(6).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_tong_thong_(6).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_03_phong_tap_ban_(1)" title="03_phong_tap_ban_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tap_ban_(1).tiles/thumb.jpg" lat="10.77084528" lng="106.69302833" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tap_ban_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tap_ban_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tap_ban_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_03_phong_tap_ban_(2)" title="03_phong_tap_ban_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tap_ban_(2).tiles/thumb.jpg" lat="10.77084528" lng="106.69302833" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="1.060" vlookat="7.365" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tap_ban_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tap_ban_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tap_ban_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_01_dai_yen_(1)" title="01_dai_yen_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(1).tiles/thumb.jpg" lat="10.77712333" lng="106.69666917" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-181.485" vlookat="3.811" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_dai_yen_(2)" title="01_dai_yen_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(2).tiles/thumb.jpg" lat="10.77706444" lng="106.69535833" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_dai_yen_(3)" title="01_dai_yen_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(3).tiles/thumb.jpg" lat="10.77787389" lng="106.69455000" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="86.657" vlookat="5.540" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_dai_yen_(4)" title="01_dai_yen_(4)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(4).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(4).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(4).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_dai_yen_(4).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_phong_khanh_tiet_(1)" title="01_phong_khanh_tiet_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(1).tiles/thumb.jpg" lat="10.77671917" lng="106.69504667" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_phong_khanh_tiet_(2)" title="01_phong_khanh_tiet_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(2).tiles/thumb.jpg" lat="10.77640278" lng="106.69518639" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_phong_khanh_tiet_(3)" title="01_phong_khanh_tiet_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(3).tiles/thumb.jpg" lat="10.77614639" lng="106.69483500" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_phong_khanh_tiet_(4)" title="01_phong_khanh_tiet_(4)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(4).tiles/thumb.jpg" lat="10.77706806" lng="106.69536222" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-18.704" vlookat="-0.115" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(4).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(4).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(4).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_phong_noi_cac_(1)" title="01_phong_noi_cac_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(1).tiles/thumb.jpg" lat="10.77699806" lng="106.69534861" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_phong_noi_cac_(2)" title="01_phong_noi_cac_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(2).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-174.451" vlookat="-1.919" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_phong_noi_cac_(3)" title="01_phong_noi_cac_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(3).tiles/thumb.jpg" lat="10.77711972" lng="106.69539889" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_phong_noi_cac_(4)" title="01_phong_noi_cac_(4)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(4).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-0.941" vlookat="14.740" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(4).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(4).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(4).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_01_sanh_lau_1_(4)" title="01_sanh_lau_1_(4)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(4).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-0.941" vlookat="14.740" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(4).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(4).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(4).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+
+	<scene name="scene_02_phong_an_ninh_quoc_gia_(1)" title="02_phong_an_ninh_quoc_gia_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-0.418" vlookat="14.319" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_an_ninh_quoc_gia_(2)" title="02_phong_an_ninh_quoc_gia_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(2).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="160.455" vlookat="12.234" fovtype="MFOV" fov="135.012" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_an_ninh_quoc_gia_(3)" title="02_phong_an_ninh_quoc_gia_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(3).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="305.303" vlookat="6.293" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_an_ninh_quoc_gia_(4)" title="02_phong_an_ninh_quoc_gia_(4)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(4).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-2.656" vlookat="3.315" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(4).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(4).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_ninh_quoc_gia_(4).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_lam_viec_pho_tong_thong_(1)" title="02_phong_lam_viec_pho_tong_thong_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(1).tiles/thumb.jpg" lat="10.77770806" lng="106.69529306" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_lam_viec_pho_tong_thong_(2)" title="02_phong_lam_viec_pho_tong_thong_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(2).tiles/thumb.jpg" lat="10.77766722" lng="106.69523500" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-20.068" vlookat="1.989" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_lam_viec_pho_tong_thong_(3)" title="02_phong_lam_viec_pho_tong_thong_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(3).tiles/thumb.jpg" lat="10.77755222" lng="106.69529528" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-86.663" vlookat="-0.830" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_lam_viec_pho_tong_thong_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_ngu_tong_thong_lung_(1)" title="02_phong_ngu_tong_thong_lung_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(1).tiles/thumb.jpg" lat="10.77754278" lng="106.69537278" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_ngu_tong_thong_lung_(2)" title="02_phong_ngu_tong_thong_lung_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(2).tiles/thumb.jpg" lat="10.77820000" lng="106.69611972" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-114.896" vlookat="5.767" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_ngu_tong_thong_lung_(3)" title="02_phong_ngu_tong_thong_lung_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(3).tiles/thumb.jpg" lat="10.77687361" lng="106.69748111" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-251.841" vlookat="9.108" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_tong_thong_lung_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_thu_vien_(1)" title="02_phong_thu_vien_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="30.155" vlookat="3.643" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_thu_vien_(2)" title="02_phong_thu_vien_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(2).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="150.408" vlookat="8.425" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_thu_vien_(3)" title="02_phong_thu_vien_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(3).tiles/thumb.jpg" lat="10.77711444" lng="106.69542278" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_thu_vien_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_tiep_khach_pho_tong_thong_(1)" title="02_phong_tiep_khach_pho_tong_thong_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(1).tiles/thumb.jpg" lat="10.77714000" lng="106.69550222" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="179.502" vlookat="12.180" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_tiep_khach_pho_tong_thong_(2)" title="02_phong_tiep_khach_pho_tong_thong_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(2).tiles/thumb.jpg" lat="10.77728361" lng="106.69527528" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-95.177" vlookat="0.924" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_tiep_khach_pho_tong_thong_(3)" title="02_phong_tiep_khach_pho_tong_thong_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(3).tiles/thumb.jpg" lat="10.77719722" lng="106.69537806" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="2.156" vlookat="-4.304" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_tiep_khach_pho_tong_thong_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_trinh_quoc_thu_(1)" title="02_phong_trinh_quoc_thu_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_trinh_quoc_thu_(2)" title="02_phong_trinh_quoc_thu_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(2).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="182.731" vlookat="24.642" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_trinh_quoc_thu_(3)" title="02_phong_trinh_quoc_thu_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(3).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_trinh_quoc_thu_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_03_phong_chieu_phim_(1)" title="03_phong_chieu_phim_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_chieu_phim_(1).tiles/thumb.jpg" lat="10.77720750" lng="106.69547444" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_chieu_phim_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_chieu_phim_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_chieu_phim_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_03_phong_giai_tri_(1)" title="03_phong_giai_tri_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_03_phong_giai_tri_(2)" title="03_phong_giai_tri_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(2).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_03_phong_giai_tri_(3)" title="03_phong_giai_tri_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(3).tiles/thumb.jpg" lat="10.77725250" lng="106.69526861" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_giai_tri_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_03_phong_tiep_khach_phu_nhan_(1)" title="03_phong_tiep_khach_phu_nhan_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(1).tiles/thumb.jpg" lat="10.77694111" lng="106.69498444" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="92.071" vlookat="5.469" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_03_phong_tiep_khach_phu_nhan_(2)" title="03_phong_tiep_khach_phu_nhan_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(2).tiles/thumb.jpg" lat="10.77707611" lng="106.69551194" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_03_phong_tiep_khach_phu_nhan_(3)" title="03_phong_tiep_khach_phu_nhan_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(3).tiles/thumb.jpg" lat="10.77691611" lng="106.69533361" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="99.944" vlookat="4.080" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/03_phong_tiep_khach_phu_nhan_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_05_phong_bep_(1)" title="05_phong_bep_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(1).tiles/thumb.jpg" lat="10.77686472" lng="106.69554806" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-83.193" vlookat="6.788" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_05_phong_bep_(2)" title="05_phong_bep_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(2).tiles/thumb.jpg" lat="10.77649139" lng="106.69576472" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-142.983" vlookat="8.961" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_05_phong_bep_(3)" title="05_phong_bep_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(3).tiles/thumb.jpg" lat="10.77701333" lng="106.69559056" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="269.548" vlookat="5.492" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_bep_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_05_phong_tap_ban_(3)" title="05_phong_tap_ban_(3)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_tap_ban_(3).tiles/thumb.jpg" lat="10.77618111" lng="106.69496889" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_tap_ban_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_tap_ban_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_tap_ban_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+   <scene name="scene_01_cong_chinh_(1)" title="01_cong_chinh_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_cong_chinh_(1).tiles/thumb.jpg" lat="10.77809083" lng="106.69635167" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-3.624" vlookat="-0.686" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_cong_chinh_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_cong_chinh_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_cong_chinh_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_mat_tien_dinh_(1)" title="01_mat_tien_dinh_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_mat_tien_dinh_(1).tiles/thumb.jpg" lat="10.77771806" lng="106.69602167" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-3.233" vlookat="-4.408" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_mat_tien_dinh_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_mat_tien_dinh_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_mat_tien_dinh_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_02_sanh_tang_2_(1)" title="02_sanh_tang_2_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="42.757" vlookat="8.306" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_sanh_tang_2_(2)" title="02_sanh_tang_2_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(2).tiles/thumb.jpg" lat="10.77711917" lng="106.69545778" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+		<scene name="scene_02_tang_tret_(1)" title="02_tang_tret_(1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_tang_tret_(1).tiles/thumb.jpg" lat="10.77703250" lng="106.69547861" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_tang_tret_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_tang_tret_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_tang_tret_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+
+	<scene name="scene_01_phong_khanh_tiet_(4)" title="01_phong_khanh_tiet_(4)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(4).tiles/thumb.jpg" lat="10.77699861" lng="106.69547111" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(4).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(4).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(4).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_phong_khanh_tiet_(5)" title="01_phong_khanh_tiet_(5)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(5).tiles/thumb.jpg" lat="10.77552722" lng="106.69558583" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="115.833" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(5).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(5).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_khanh_tiet_(5).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_phong_noi_cac_(2)" title="01_phong_noi_cac_(2)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(2).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_01_phong_noi_cac_(3)" title="01_phong_noi_cac_(3)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(3).tiles/thumb.jpg" lat="10.77711889" lng="106.69533361" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/01_phong_noi_cac_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_an_(1)" title="02_phong_an_(1)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="123.999" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_an_(2)" title="02_phong_an_(2)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(2).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="138.289" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_an_(3)" title="02_phong_an_(3)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(3).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-91.453" vlookat="1.859" fovtype="MFOV" fov="136.833" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_an_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_ngu_canh_phai_(1)" title="02_phong_ngu_canh_phai_(1)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(1).tiles/thumb.jpg" lat="10.77656000" lng="106.69534861" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-87.091" vlookat="8.439" fovtype="MFOV" fov="127.868" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_ngu_canh_phai_(2)" title="02_phong_ngu_canh_phai_(2)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(2).tiles/thumb.jpg" lat="10.77682500" lng="106.69501167" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="3.557" vlookat="11.481" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_ngu_canh_phai_(3)" title="02_phong_ngu_canh_phai_(3)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(3).tiles/thumb.jpg" lat="10.77653833" lng="106.69478417" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-24.873" vlookat="17.946" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_phai_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_ngu_canh_trai_(1)" title="02_phong_ngu_canh_trai_(1)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(1).tiles/thumb.jpg" lat="10.77720056" lng="106.69478417" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-1.327" vlookat="4.479" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_ngu_canh_trai_(2)" title="02_phong_ngu_canh_trai_(2)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(2).tiles/thumb.jpg" lat="10.77693778" lng="106.69497167" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-114.312" vlookat="6.434" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_ngu_canh_trai_(3)" title="02_phong_ngu_canh_trai_(3)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(3).tiles/thumb.jpg" lat="10.77689528" lng="106.69510667" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-34.684" vlookat="5.036" fovtype="MFOV" fov="127.908" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ngu_canh_trai_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_sanh_tang_2_(1)" title="02_sanh_tang_2_(1)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="41.501" vlookat="6.270" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_sanh_tang_2_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_05_phong_tap_ban_(1)" title="05_phong_tap_ban_(1)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_tap_ban_(1).tiles/thumb.jpg" lat="10.77084528" lng="106.69302833" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="135.015" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_tap_ban_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_tap_ban_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_tap_ban_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_05_phong_trung_bay_(1)" title="05_phong_trung_bay_(1)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="138.289" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_05_phong_trung_bay_(2)" title="05_phong_trung_bay_(2)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(2).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-93.770" vlookat="15.090" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_05_phong_trung_bay_(3)" title="05_phong_trung_bay_(3)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(3).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.705" vlookat="16.632" fovtype="MFOV" fov="138.289" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/05_phong_trung_bay_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_06_phong_truc_chien_(1)" title="06_phong_truc_chien_(1)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="131.538" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_06_phong_truc_chien_(2)" title="06_phong_truc_chien_(2)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(2).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-1.327" vlookat="10.117" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_06_phong_truc_chien_(3)" title="06_phong_truc_chien_(3)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(3).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/06_phong_truc_chien_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+    <scene name="scene_02_phong_ke_hoach_tai_vu_(1)" title="02_phong_ke_hoach_tai_vu_(1)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(1).tiles/thumb.jpg" lat="10.77656611" lng="106.69563667" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="115.936" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_ke_hoach_tai_vu_(2)" title="02_phong_ke_hoach_tai_vu_(2)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(2).tiles/thumb.jpg" lat="10.77676222" lng="106.69565528" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="87.591" vlookat="12.033" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_02_phong_ke_hoach_tai_vu_(3)" title="02_phong_ke_hoach_tai_vu_(3)" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(3).tiles/thumb.jpg" lat="10.77667250" lng="106.69582944" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.713" vlookat="7.357" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="https://s3.hcm-1.cloud.cmctelecom.vn/starglobal-3d/smart-heritage-3d/dinh-doc-lap/panos/02_phong_ke_hoach_tai_vu_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+
+</krpano>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

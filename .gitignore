@@ -1,0 +1,9 @@
+config/.env
+upload/panos/*
+upload/image/*
+upload/audio/*
+!upload/panos/.gitkeep
+!upload/image/.gitkeep
+!upload/audio/.gitkeep
+*.log
+.DS_Store
