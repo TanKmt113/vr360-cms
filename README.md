@@ -1,4 +1,4 @@
-# VR360 CMS
+# VR360 CMS Test
 
 Hệ thống quản trị tour ảo 360° (PHP + MySQL), kiến trúc mô phỏng `managements` của StarGlobal3D.
 **Trạng thái: đầy đủ tính năng** (Phase 0→5). Lộ trình & nhật ký ở `../KE-HOACH.md`.
