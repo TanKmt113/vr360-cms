@@ -6,9 +6,15 @@ require dirname(__DIR__, 2) . '/includes/header.php';
 
 $tours = db_all('SELECT id, id_path, title FROM tours ORDER BY title');
 $tourId = (int)($_GET['tour'] ?? ($tours[0]['id'] ?? 0));
+$currentTour = $tourId ? db_one('SELECT id, id_path, title FROM tours WHERE id = ?', [$tourId]) : null;
 $scenes = $tourId ? db_all('SELECT * FROM scenes WHERE tour_id = ? ORDER BY sort, id', [$tourId]) : [];
+$msg = $_GET['msg'] ?? '';
 ?>
-<h1 class="h3 fw-bold mb-4">Quản lý Scene</h1>
+<h1 class="h3 fw-bold mb-1">Quản lý Scene</h1>
+<?php if ($currentTour): ?>
+<p class="section-sub mb-3">Tour #<?= (int)$currentTour['id'] ?> · <code><?= htmlspecialchars($currentTour['id_path']) ?></code> · <?= htmlspecialchars($currentTour['title']) ?> · <?= count($scenes) ?> scene</p>
+<?php endif; ?>
+<?php if ($msg): ?><div class="alert alert-success"><i class="bi bi-check-circle me-1"></i><?= htmlspecialchars($msg) ?></div><?php endif; ?>
 
 <div class="card border-0 shadow-sm mb-3"><div class="card-body">
     <form method="get" style="margin:0;">
@@ -16,7 +22,7 @@ $scenes = $tourId ? db_all('SELECT * FROM scenes WHERE tour_id = ? ORDER BY sort
             <select class="form-select" name="tour" onchange="this.form.submit()">
                 <?php foreach ($tours as $t): ?>
                     <option value="<?= $t['id'] ?>" <?= $t['id'] == $tourId ? 'selected' : '' ?>>
-                        <?= htmlspecialchars($t['title']) ?> (<?= htmlspecialchars($t['id_path']) ?>)
+                        #<?= $t['id'] ?> — <?= htmlspecialchars($t['title']) ?> (<?= htmlspecialchars($t['id_path']) ?>)
                     </option>
                 <?php endforeach; ?>
             </select>

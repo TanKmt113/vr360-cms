@@ -11,8 +11,12 @@ csrf_check();
 @ini_set('max_input_time', '600');
 @ini_set('memory_limit', '512M');
 
-function back(string $key, string $val): void
+function back(string $key, string $val, ?int $tourId = null): void
 {
+    if ($key === 'msg' && $tourId) {
+        header('Location: /admin/modules/scene/list.php?tour=' . $tourId . '&msg=' . urlencode($val));
+        exit;
+    }
     header('Location: /admin/modules/import/index.php?' . $key . '=' . urlencode($val));
     exit;
 }
@@ -68,4 +72,6 @@ if ($cleanup) {
 if (!$r['ok']) {
     back('err', $r['error'] ?? 'Import thất bại.');
 }
-back('msg', "Import xong: {$r['imported']} scene (bỏ qua {$r['skipped']}, copy tiles {$r['copied']}). Xem: /public/viewer.php?id={$tour['id_path']}");
+$summary = "Import xong tour #{$tourId} ({$tour['id_path']}): {$r['imported']} scene"
+    . " (bỏ qua {$r['skipped']}, copy tiles {$r['copied']}).";
+back('msg', $summary, $tourId);
