@@ -53,14 +53,11 @@ if ($mode === 'zip') {
         }
     }
 } else {
-    // Cách 1: đường dẫn server (tương đối so với gốc CMS, hoặc tuyệt đối)
-    $src = trim((string)($_POST['src'] ?? ''));
-    if ($src === '') {
-        back('err', 'Cần nhập đường dẫn thư mục.');
+    $resolved = resolve_krpano_src(trim((string)($_POST['src'] ?? '')));
+    if (!$resolved['ok']) {
+        back('err', $resolved['error'] ?? 'Đường dẫn không hợp lệ.');
     }
-    if ($src[0] !== '/') {
-        $src = BASE_PATH . '/' . $src;   // tương đối → ghép gốc dự án
-    }
+    $src = (string)$resolved['path'];
 }
 
 $r = import_krpano_tour($src, $tourId, (string)$tour['id_path'], true, $doReset);
@@ -72,6 +69,5 @@ if ($cleanup) {
 if (!$r['ok']) {
     back('err', $r['error'] ?? 'Import thất bại.');
 }
-$summary = "Import xong tour #{$tourId} ({$tour['id_path']}): {$r['imported']} scene"
-    . " (bỏ qua {$r['skipped']}, copy tiles {$r['copied']}).";
+$summary = format_import_summary($r, $tourId, (string)$tour['id_path']);
 back('msg', $summary, $tourId);

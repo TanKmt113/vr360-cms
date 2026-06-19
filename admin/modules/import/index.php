@@ -37,7 +37,8 @@ $err = $_GET['err'] ?? '';
                 <span class="badge text-bg-light border ms-auto">tour lớn</span>
             </div>
             <p class="section-sub">Khuyên dùng cho tour dung lượng lớn — không qua giới hạn upload.</p>
-            <form method="post" action="/admin/api/import_tour_web.php" class="d-flex flex-column flex-fill">
+            <p class="small text-muted mb-2">Đường dẫn tương đối tính từ gốc CMS (<code><?= htmlspecialchars(BASE_PATH) ?></code>) hoặc đường dẫn tuyệt đối. Thư mục phải có <code>tour.xml</code> (hoặc <code>tour_xml/tour.xml</code>) + <code>panos/</code>.</p>
+            <form method="post" action="/admin/api/import_tour_web.php" class="d-flex flex-column flex-fill" id="path-import-form">
                 <input type="hidden" name="csrf" value="<?= csrf_token() ?>">
                 <input type="hidden" name="mode" value="path">
                 <div class="mb-2">
@@ -48,13 +49,14 @@ $err = $_GET['err'] ?? '';
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Đường dẫn thư mục krpano trên server</label>
-                    <input class="form-control" name="src" placeholder="/www/wwwroot/.../tour-cua-ban hoặc _research/dinh-doc-lap" required>
+                    <input class="form-control" name="src" placeholder="_research/dinh-doc-lap hoặc /home/.../public_html/tour" required>
                 </div>
                 <div class="form-check form-switch mb-3">
                     <input class="form-check-input" type="checkbox" role="switch" id="reset1" name="reset" value="1">
                     <label class="form-check-label small" for="reset1">Xoá scene cũ trước khi import</label>
                 </div>
-                <button type="submit" class="btn btn-primary mt-auto"><i class="bi bi-folder-symlink me-1"></i>Import từ thư mục</button>
+                <button type="submit" class="btn btn-primary mt-auto" id="path-import-btn"><i class="bi bi-folder-symlink me-1"></i>Import từ thư mục</button>
+                <p class="small text-muted mt-2 mb-0 d-none" id="path-import-status"><span class="spinner-border spinner-border-sm me-1"></span>Đang đọc XML và copy tiles, có thể mất vài phút…</p>
             </form>
         </div></div>
     </div>
@@ -93,6 +95,12 @@ $err = $_GET['err'] ?? '';
 </div>
 
 <script>
+document.getElementById('path-import-form')?.addEventListener('submit', function () {
+    const btn = document.getElementById('path-import-btn');
+    const status = document.getElementById('path-import-status');
+    if (btn) { btn.disabled = true; btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Đang xử lý…'; }
+    status?.classList.remove('d-none');
+});
 document.getElementById('zip-import-form')?.addEventListener('submit', function () {
     const btn = document.getElementById('zip-import-btn');
     const status = document.getElementById('zip-import-status');

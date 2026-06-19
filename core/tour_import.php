@@ -127,6 +127,51 @@ function krpano_find_xml(string $src): ?string
 }
 
 /**
+ * Chuẩn hoá đường dẫn thư mục krpano từ form/CLI.
+ * @return array{ok:bool, path:?string, error:?string}
+ */
+function resolve_krpano_src(string $input): array
+{
+    $input = trim($input);
+    if ($input === '') {
+        return ['ok' => false, 'path' => null, 'error' => 'Cần nhập đường dẫn thư mục.'];
+    }
+
+    $path = $input[0] === '/' ? $input : BASE_PATH . '/' . ltrim($input, './');
+    $path = rtrim(str_replace('\\', '/', $path), '/');
+    $real = realpath($path);
+    if ($real === false || !is_dir($real)) {
+        return [
+            'ok' => false,
+            'path' => null,
+            'error' => "Không tìm thấy thư mục: {$input} (gốc CMS: " . BASE_PATH . ')',
+        ];
+    }
+
+    // Thư mục krpano có thể nằm lồng 1 cấp (vd .../dinh-doc-lap/tour_xml + panos)
+    if (krpano_find_xml($real) === null) {
+        foreach (glob("$real/*", GLOB_ONLYDIR) ?: [] as $sub) {
+            if (krpano_find_xml($sub) !== null) {
+                $real = $sub;
+                break;
+            }
+        }
+    }
+    if (krpano_find_xml($real) === null) {
+        return [
+            'ok' => false,
+            'path' => null,
+            'error' => 'Không thấy tour.xml / tour_xml/tour.xml / ngan-hack.xml có thẻ <scene>.',
+        ];
+    }
+    if (!is_dir("$real/panos")) {
+        return ['ok' => false, 'path' => null, 'error' => 'Thiếu thư mục panos/ trong thư mục krpano.'];
+    }
+
+    return ['ok' => true, 'path' => $real, 'error' => null];
+}
+
+/**
  * Thực hiện import.
  * @return array{ok:bool, imported:int, skipped:int, copied:int, error:?string, log:array}
  */
@@ -154,12 +199,6 @@ function import_krpano_tour(string $src, int $tourId, string $tourPath, bool $do
     }
 
     $destPanosRoot = UPLOAD_PATH . "/panos/$idPath";
-    if ($doCopy && is_dir("$src/panos") && !is_dir($destPanosRoot)) {
-        @mkdir(dirname($destPanosRoot), 0775, true);
-        if (rcopy_dir("$src/panos", $destPanosRoot)) {
-            $res['log'][] = 'Đã copy thư mục panos/ sang upload.';
-        }
-    }
 
     $attr = function (string $s, string $name): ?string {
         return preg_match('/\b' . preg_quote($name, '/') . '\s*=\s*"([^"]*)"/', $s, $m) ? $m[1] : null;
@@ -213,10 +252,13 @@ function import_krpano_tour(string $src, int $tourId, string $tourPath, bool $do
         $res['imported']++;
 
         if ($doCopy) {
-            $dest = UPLOAD_PATH . "/panos/$idPath/$tilesFolder";
-            if (!is_dir($dest)) {
+            $dest = "$destPanosRoot/$tilesFolder";
+            if (!is_file("$dest/thumb.jpg")) {
+                @mkdir($destPanosRoot, 0775, true);
                 if (rcopy_dir($srcTiles, $dest)) {
                     $res['copied']++;
+                } else {
+                    $res['log'][] = "Copy tiles lỗi: $tilesFolder";
                 }
             }
         }
@@ -224,4 +266,21 @@ function import_krpano_tour(string $src, int $tourId, string $tourPath, bool $do
 
     $res['ok'] = true;
     return $res;
+}
+
+/** Tóm tắt kết quả import cho giao diện admin. */
+function format_import_summary(array $r, int $tourId, string $idPath): string
+{
+    $msg = "Import xong tour #{$tourId} ({$idPath}): {$r['imported']} scene"
+        . " (bỏ qua {$r['skipped']}, copy tiles {$r['copied']}).";
+    if (($r['skipped'] ?? 0) > 0) {
+        $msg .= ' Scene bị bỏ qua thường do thiếu panos/*.tiles trên server (panorama chỉ có trên CDN/S3).';
+    }
+    if (($r['imported'] ?? 0) > 0 && ($r['copied'] ?? 0) === 0) {
+        $msg .= ' Tiles chưa copy mới — có thể đã có sẵn trong upload/panos/.';
+    }
+    if (($r['imported'] ?? 0) === 0) {
+        $msg .= ' Không import được scene nào — kiểm tra đường dẫn và thư mục panos/.';
+    }
+    return $msg;
 }
